@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Exam Page</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <h1>University Exam</h1>
+  <p>Students see questions here.</p>
+
+  <hr>
+  <div data-netlify-identity-button>Teacher Login</div>
+
+  <script>
+    // 3. Redirect to admin page after login
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin.html";
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main # or master
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "exams"
+    label: "Exams"
+    folder: "content/exams" # Where questions will be saved
+    create: true
+    fields:
+      - {label: "Exam Title", name: "title", widget: "string"}
+      - {label: "Question 1", name: "q1", widget: "text"}
+      - {label: "Answer 1", name: "a1", widget: "string"}
